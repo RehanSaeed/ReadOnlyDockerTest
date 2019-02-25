@@ -7,7 +7,7 @@
 
  # Stage 2
  FROM microsoft/dotnet:2.2-aspnetcore-runtime
- ENV COMPlus_EnableDiagnostic=0
+ ENV COMPlus_EnableDiagnostics=0
  WORKDIR /app
  COPY --from=builder /app .
  ENTRYPOINT ["dotnet", "ReadOnlyTest.dll"]
